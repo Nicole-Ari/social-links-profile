@@ -1,0 +1,117 @@
+@font-face {
+  font-family: interThin;
+  src: url(assets/fonts/static/Inter_18pt-Thin.ttf);
+}
+@font-face {
+  font-family: interLight;
+  src: url(assets/fonts/static/Inter_18pt-Light.ttf);
+}
+@font-face {
+  font-family: interRegular;
+  src: url(assets/fonts/static/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: interSemiBold;
+  src: url(assets/fonts/static/Inter-SemiBold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+  --fs: 14px;
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+  --br-out: 0.7em;
+  --br-in: 0.3em;
+}
+body {
+  background: var(--grey-900);
+  color: var(--white);
+  font-family: interRegular, sans-serif;
+  font-size: var(--fs);
+  font-weight: var(--fw-400);
+}
+main {
+  background: var(--grey-800);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  width: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--br-out);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  gap: 1.5em;
+}
+main header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5em;
+  font-family: interSemiBold, sans-serif;
+}
+
+header > img {
+  border-radius: 100%;
+  width: 30%;
+}
+header .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+.details h3 {
+  font-size: 1.5em;
+}
+.details > small {
+  color: var(--green);
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  width: 100%;
+  font-family: interRegular, sans-serif;
+}
+.items small {
+  font-family: interRegular, sans-serif;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+}
+.links .lk {
+  background: var(--grey-700);
+  text-align: center;
+  padding: 0.6em;
+  border-radius: var(--br-in);
+  font-weight: var(--fw-600);
+  transition: all 0.2s ease-in-out;
+}
+.links .lk:hover {
+  background: var(--green);
+  cursor: pointer;
+  color: black;
+}
+@media (prefers-reduced-motion: reduce) {
+  .links .lk {
+    transition: unset;
+  }
+}
